@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+   		http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd">
+
+    <!-- Create the customer table -->
+    <changeSet id="createCustomerTable" author="Sachin.Bansode">
+        <createTable tableName="customer">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="first_name" type="varchar(45)"/>
+            <column name="last_name" type="varchar(45)"/>
+            <column name="email" type="varchar(45)"/>
+        </createTable>
+    </changeSet>
+
+    <!-- Insert data into the customer table -->
+    <changeSet id="insertCustomerData" author="Sachin.Bansode">
+        <insert tableName="customer">
+            <column name="id" value="1"/>
+            <column name="first_name" value="David"/>
+            <column name="last_name" value="Adams"/>
+            <column name="email" value="david@luv2code.com"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="2"/>
+            <column name="first_name" value="John"/>
+            <column name="last_name" value="Doe"/>
+            <column name="email" value="john@luv2code.com"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="3"/>
+            <column name="first_name" value="Ajay"/>
+            <column name="last_name" value="Rao"/>
+            <column name="email" value="ajay@luv2code.com"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="4"/>
+            <column name="first_name" value="Mary"/>
+            <column name="last_name" value="Public"/>
+            <column name="email" value="mary@luv2code.com"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="5"/>
+            <column name="first_name" value="Maxwell"/>
+            <column name="last_name" value="Dixon"/>
+            <column name="email" value="max@luv2code.com"/>
+        </insert>
+    </changeSet>
+    
+</databaseChangeLog>
