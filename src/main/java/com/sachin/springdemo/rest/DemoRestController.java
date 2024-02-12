@@ -30,5 +30,15 @@ public class DemoRestController {
 			sb1.append("<h1>My short-term goal is to get placed in a reputed company where I can improve my skills and knowledge.I developed many static and dynamic websites. I really enjoyed developing websites for to-do lists. It helps users keep track of their tasks.</h1>");
 			return sb1.toString();
 		}
+	@CrossOrigin
+	@GetMapping("/getAnjaliReddyIntro")
+	public String getAnjaliReddyIntro() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Hello! My name is ");
+		sb.append("<h2>Anjali Naragude</h2>");
+		sb.append(", I am a dedicated and passionate individual who has successfully completed my Bachelor of Engineering degree with a specialization in [Computer Science] from SRTMUN University. During my academic journey, I developed a strong foundation in various aspects of engineering.I have practical experience as an intern at TechSophy, where I delved into the dynamic world of technology. My hands-on experience includes working with HTML, CSS, JavaScript, ReactJS, Core Java, API, and Spring Boot. These experiences have not only honed my technical skills but have also provided me with valuable insights into collaborative and innovative problem-solving.I am eager to contribute my skills and knowledge to dynamic projects, leveraging my proficiency in web development and Java-based technologies. Looking forward to new challenges and opportunities for growth in the field of technology.");
+		
+		return sb.toString(); 
+	}
 
 }
