@@ -49,5 +49,14 @@ public class DemoRestController {
 		
 		return sb.toString(); 
 	}
+	
+	@CrossOrigin
+	@GetMapping("/getMayurMundankarIntro")
+	public String getMayurMundankarIntro() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Hello! This is MAYUR 😎😎. ");
+		
+		return sb.toString(); 
+	}
 
 }
