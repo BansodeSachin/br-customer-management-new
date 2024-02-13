@@ -5,8 +5,8 @@ FROM maven:3.8.4-openjdk-8 AS builder
 WORKDIR /app
 
 # Copy SSL certificates
-COPY ssl-certificates/fullchain.pem /app/fullchain.pem
-COPY ssl-certificates/privkey.pem /app/privkey.pem
+COPY ssl/fullchain.pem /app/fullchain.pem
+COPY ssl/privkey.pem /app/privkey.pem
 
 # Copy the project files into the container
 COPY . .
