@@ -20,7 +20,18 @@ public class DemoRestController {
 		return sb.toString(); 
 		
 	}
-	
+	@GetMapping("/getJaydipJamindarIntro")
+	public String getJaydipJamindarIntro() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Hello! My name is ");
+		sb.append("<h2>Jaydip Jamindar</h2>");
+		sb.append("and I am a recent B.Tech graduate from Pune University, having completed my degree in 2022. Following my graduation, I undertook a Java Developer course at Naresh IT in Hyderabad, where I honed my skills in Java programming. Subsequently, I gained practical experience as a trainer for four months, imparting knowledge to others."+
+
+"Originally hailing from Latur district in Maharashtra, I bring a diverse perspective and a strong educational foundation to my work. I am enthusiastic about leveraging my technical expertise and teaching experience to contribute meaningfully to the world of software development.");
+		
+		return sb.toString(); 
+		
+	}
 	@GetMapping("/getDattaIntro")
 		
 		public String getDattaIntro(){
