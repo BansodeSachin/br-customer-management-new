@@ -59,4 +59,13 @@ public class DemoRestController {
 		return sb.toString(); 
 	}
 
+	@GetMapping("/getBharatIntro")
+	public String getBharat(){
+		StringBuilder sb2 = new StringBuilder();
+		sb2.append("hello my name is Bharat Survase");
+		sb2.append("From Latur Maharastra");
+		sb2.append("<h1>My short-term goal is to get placed in a reputed company where I can improve my skills and knowledge.I developed many static and dynamic websites. I really enjoyed developing websites for to-do lists. It helps users keep track of their tasks.</h1>");
+		return sb2.toString();
+	}
+
 }
