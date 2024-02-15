@@ -88,15 +88,17 @@ public class DemoRestController {
 		sb2.append("<h1> I am purchasing graduation at Swami Ramananda theatre Maratha University Nanded, I have excellent knowledge about HTML CSS and JavaScript ,I am passionate about learning new technology that help me to Achu my personal as well as professional goal.</h1>");
 		return sb2.toString();
 	}
-@GetMapping("/getmusaleanuradhaIntro")
-	
-	public String getmusaleanuradhaIntro(){
-		StringBuilder sb2 = new StringBuilder();
-		sb2.append("Hello my name is");
-		sb2.append("Anuradhamusale");
-		sb2.append("<h1> I am purchasing postgradution at Swami Ramananda theatre Maratha University Nanded, I have excellent knowledge about HTML CSS and JavaScript ,I am passionate about learning new technology that help me to Achu my personal as well as professional goal.</h1>");
-		return sb2.toString();
-	}
+
+
+@GetMapping("/getMunishPatilIntro")
+
+public String getMunishPatilIntro(){
+	StringBuilder sb2 = new StringBuilder();
+	sb2.append("Hello my name is");
+	sb2.append("Munishpatil");
+	sb2.append("<h1> I am purchasing postgradution at Swami Ramananda theatre Maratha University Nanded, I have excellent knowledge about HTML CSS and JavaScript ,I am passionate about learning new technology that help me to Achu my personal as well as professional goal.</h1>");
+	return sb2.toString();
+}
 
 }
 
