@@ -16,4 +16,9 @@ public class HelloController {
 	public String indexPage() {
 		return "index";
 	}
+	@RequestMapping("Check")
+	public String CheckPage()
+	{
+		return "new update checking. good...Its Working";
+	}
 }
