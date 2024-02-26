@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: br-customer-management
+  labels:
+    app: br-customer-management
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: br-customer-management
+  template:
+    metadata:
+      labels:
+        app: br-customer-management
+    spec:
+      containers:
+      - name: br-customer-management
+        image: bansodesachin/br-customer-management-new:latest
+        ports:
+        - containerPort: 8083
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: br-customer-management
+  labels:
+    app: br-customer-management
+spec:
+  ports:
+  - port: 8083
+    targetPort: 8083
+  selector:
+    app: br-customer-management
+  type: NodePort
